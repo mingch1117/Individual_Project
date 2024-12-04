@@ -1,0 +1,124 @@
+/* main, starting */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/* General Styles */
+body {
+    font-family:'Courier New', Courier, monospace;
+    background: #f9f9f9;
+    color: #333;
+    text-align: center; /* Ensures content is centered */
+    padding-top: 50px; /* Space for the navbar */
+    margin: 0px 40px 40px 40px;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #828282; /* hover effect */
+}
+
+/* Page Content */
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+
+img{
+    margin:0 auto;
+    align-items: center;
+}
+
+table{
+    width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+/* General Table Styles */
+.project-table {
+    margin: 20px auto;
+    width: 80%;
+    font-size: 1em;
+    border-collapse: collapse;
+}
+
+.project-table th, 
+.project-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    display: none; /* Hide images by default */
+    width: 400px;
+    height: auto;
+    position: absolute; /* Remove from the document flow */
+    left: 60%; /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show Image on Hover of Project Title */
+.project-table td a:hover ~ .image-container img {
+    display: block; /* Make the image visible */
+    opacity: 1;
+}
+
+
+.UG1-table, .ARCH258-table{
+    margin: 20px auto;
+    width: 800px;
+}
+
+.ARCH509-table{
+    margin: 20px auto;
+    width: 1000px;
+    grid-column: 1fr 1fr;
+}
+
+.ARCH509-table img{
+    width: 600px;
+}
